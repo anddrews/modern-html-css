@@ -1,0 +1,28 @@
+.popover {
+  background-color: #000;
+  color: #fff;
+  gap: 30px;
+  align-items: center;
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  margin-left: 0;
+  transition:  left 0.7s ease-out;
+  border-radius: 10px;
+
+  &:open {
+    display: flex;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@starting-style {
+  .popover:open {
+    left: -100%;
+  }
+}

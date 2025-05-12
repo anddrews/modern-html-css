@@ -1,0 +1,15 @@
+@layer base, components;
+
+@import "components.css" layer(components);
+@import "base.css" layer(base);
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+
+
+
+

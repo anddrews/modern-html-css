@@ -1,0 +1,11 @@
+:root {
+  --hello-world: 'Hello World';
+}
+
+body:has(input[value="lt"]:checked) {
+  --hello-world: 'Labas pasauli';
+}
+
+body:has(input[value="no"]:checked) {
+  --hello-world: 'Hei verden';
+}
