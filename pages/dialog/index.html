@@ -6,13 +6,62 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../../main.css">
-    <script type="module" src="./index.js"></script>
+  <script type="module" crossorigin src="/assets/dialog-D1O-j7Vy.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-DtaEnHJT.css">
 </head>
 <body>
-    {{> modal/modal-js}}
-    {{> modal/modal-tag}}
-    {{> popover/popover}}
+    <div id="modal-1" class="modal-overlay" aria-hidden="true">
+        <div tabindex="-1" >
+            <div role="dialog" aria-modal="true" class="dialog" >
+                <header>
+                    <h2 id="modal-1-title">
+                        Modal Title
+                    </h2>
+                    <button aria-label="Close modal"  class="dialog__close" onclick="MicroModal.close('modal-1')">X</button>
+                </header>
+                <div id="modal-1-content">
+                    <form class="form">
+                        <label>First Name <input type="text"/></label>
+                        <label>Last Name <input type="text"/></label>
+                        <label>E-mail <input type="text"/></label>
+                    </form>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet asperiores assumenda, dignissimos doloribus, esse fugiat harum id illo ipsa ipsum iste itaque, necessitatibus nisi obcaecati possimus quasi unde voluptatem.</p>
+                    <style>
+                        .form {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                        }
+                    </style>            </div>
+            </div>
+        </div>
+    </div>    <dialog id="dialog" class="dialog">
+        <form method="dialog">
+            <button type="submit" class="dialog__close" aria-label="close modal">X</button>
+        </form>
+        <header>
+            <h2 >
+                Modal Title
+            </h2>
+        </header>
+        <form class="form">
+            <label>First Name <input type="text"/></label>
+            <label>Last Name <input type="text"/></label>
+            <label>E-mail <input type="text"/></label>
+        </form>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet asperiores assumenda, dignissimos doloribus, esse fugiat harum id illo ipsa ipsum iste itaque, necessitatibus nisi obcaecati possimus quasi unde voluptatem.</p>
+        <style>
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        </style></dialog>    <dialog id="popover" class="popover">
+        <span>Your action was completed successfully</span>
+        <form method="dialog">
+            <button type="submit" class="popover__close">X</button>
+        </form>
+    </dialog>
     <button onclick="MicroModal.show('modal-1');">Open Modal JS</button>
     <div class="actions" style="padding: 5px">
         <button onclick="dialog.showModal()">Open modal</button>
